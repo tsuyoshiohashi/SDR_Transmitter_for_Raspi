@@ -60,9 +60,9 @@ IQ変調器の帯域は160MHzありますがごくわずかしか使っていま
 Please refer to trf372017_PLL.png when changing the transmission frequency and step frequency.
 The bandwidth of the IQ modulator is 160MHz, but it is used very little. 192k/160M=0.12%.....
 
-高周波出力は測定していませんが0dBm以下でしょう．
+高周波出力は測定していませんが10dBm以下でしょう．(P1dB=11dBm)
 
-I haven't measured the high frequency output, but it should be less than 0dBm.
+I haven't measured the high frequency output, but it should be less than 10dBm.(P1dB=11dBm)
 
 詳しくは回路図や基板図を見てください．
 

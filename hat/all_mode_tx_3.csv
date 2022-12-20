@@ -1,0 +1,204 @@
+Source:,KiCad\6.0\projects\all_mode_tx\all_mode_tx_3\all_mode_tx_3.kicad_sch,,,,,
+Date:,2022/12/7 8:06,,,,,
+Tool:,Eeschema (6.0.7),,,,,
+Generator:,C:\Program Files\KiCad\6.0\bin\scripting\plugins/bom_csv_grouped_by_value.py,,,,,
+Component Count:,123,,,,,
+,,,,,,
+Individual Components:,,,,,,
+,,,,,,
+Item,Qty,Reference(s),Value,LibPart,Footprint,Datasheet
+,,C1,10u,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C2,104,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C3,10u,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C4,104,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C5,104,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C6,104,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C7,104,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C8,474,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C9,2.2p,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C10,2.2p,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C11,2.7p,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C12,2.7p,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C13,221,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C14,4.7u,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C15,4.7u,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C16,4.7u,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C17,4.7u,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C18,27p,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C19,103,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C20,39p,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C21,10p,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C22,100p,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C23,1u,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C24,100p,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C25,100p,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C26,4.7p,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C27,102,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C28,4.7p,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C29,4.7p,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C30,4.7p,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C31,100p,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C32,100p,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C33,4.7p,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C34,4.7p,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C35,47p,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C36,4.7p,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C37,1u,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C38,1u,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C39,1u,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C40,10u,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C41,3.3,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C42,104,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C43,10u,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C44,104,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C45,10u,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C46,104,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,C47,104,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+,,D1,PWR,Device:LED,LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,D2,LD,Device:LED,LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,FB1,1k,Device:FerriteBead_Small,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,FB2,1k,Device:FerriteBead_Small,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,FB3,1k,Device:FerriteBead_Small,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,FB4,1k,Device:FerriteBead_Small,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,FB5,1k,Device:FerriteBead_Small,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,FB6,1k,Device:FerriteBead_Small,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,FB7,1k,Device:FerriteBead_Small,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,FB8,1k,Device:FerriteBead_Small,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,FB9,DNI,Device:FerriteBead_Small,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,J1,GPIO,Connector_Generic:Conn_02x20_Odd_Even,Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical,~
+,,J2,SMA,Connector:Conn_Coaxial,Connector_Coaxial:SMA_Molex_73251-1153_EdgeMount_Horizontal, ~
+,,L1,68n,Device:L,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,L2,68n,Device:L,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,L3,68n,Device:L,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,L4,68n,Device:L,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,L5,10n,Device:L,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,L6,10n,Device:L,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,L7,10n,Device:L,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,L8,10n,Device:L,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+,,Q1,Q_NMOS_GSD,Device:Q_NMOS_GSD,Package_TO_SOT_SMD:SOT-23,~
+,,R1,331,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R2,4.7k,Device:R_Small,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R3,4.7k,Device:R_Small,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R4,4.7k,Device:R_Small,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R5,4.7k,Device:R_Small,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R6,47,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R7,47,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R8,47,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R9,60.4,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R10,60.4,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R11,60.4,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R12,60.4,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R13,0,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R14,90.9,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R15,90.9,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R16,47,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R17,47,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R18,3.3k,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R19,2.2k,Device:R_Small,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R20,10k,Device:R_Small,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R21,5.6k,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R22,271,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R23,50,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R24,33,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R25,33,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R26,33,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R27,10k,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R28,10k,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R29,10k,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,R30,10k,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+,,TP1,BBI-,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP2,BBI+,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP3,BBQ-,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP4,BBQ+,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP5,SPILE,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP6,SPICLK,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP7,SPIDATA,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP8,SPIRDBK,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP9,PLL_LD,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP10,GND,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.5mm,~
+,,TP11,/RST,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP12,SDIN,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP13,SCLK,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP14,LRCK,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP15,RMCK,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP16,B-,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP17,B+,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP18,A-,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,TP19,A+,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+,,U1,AZ1117-3.3,Regulator_Linear:AZ1117-3.3,Package_TO_SOT_SMD:SOT-223,https://www.diodes.com/assets/Datasheets/AZ1117.pdf
+,,U2,LT6604,My_Library2:LT6604,MyLibrary:LT6604IUFF-2.5-PBF,
+,,U3,TRF372017,My_Library2:TRF372017,Package_DFN_QFN:VQFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm_ThermalVias,
+,,U4,CS4350,My_Library2:CS4350,Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm,
+,,X1,ASV-20.0MHz,Oscillator:ASV-xxxMHz,Oscillator:Oscillator_SMD_Abracon_ASV-4Pin_7.0x5.1mm,http://www.abracon.com/Oscillators/ASV.pdf
+,,,,,,
+,,,,,,
+,,,,,,
+Collated Components:,,,,,,
+,,,,,,
+Item,Qty,Reference(s),Value,LibPart,Footprint,Datasheet
+1,5,"C1, C3, C40, C43, C45",10u,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+2,7,"C2, C6, C7, C42, C44, C46, C47",104,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+3,2,"C4, C5",104,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+4,1,C8,474,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+5,2,"C9, C10",2.2p,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+6,2,"C11, C12",2.7p,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+7,1,C13,221,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+8,4,"C14, C15, C16, C17",4.7u,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+9,1,C18,27p,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+10,1,C19,103,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+11,1,C20,39p,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+12,1,C21,10p,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+13,4,"C22, C24, C25, C32",100p,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+14,4,"C23, C37, C38, C39",1u,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+15,7,"C26, C28, C29, C30, C33, C34, C36",4.7p,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+16,1,C27,102,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+17,1,C31,100p,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+18,1,C35,47p,Device:C_Small,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+19,1,C41,3.3,Device:C,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~
+20,1,D1,PWR,Device:LED,LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+21,1,D2,LD,Device:LED,LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+22,8,"FB1, FB2, FB3, FB4, FB5, FB6, FB7, FB8",1k,Device:FerriteBead_Small,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+23,1,FB9,DNI,Device:FerriteBead_Small,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+24,1,J1,GPIO,Connector_Generic:Conn_02x20_Odd_Even,Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical,~
+25,1,J2,SMA,Connector:Conn_Coaxial,Connector_Coaxial:SMA_Molex_73251-1153_EdgeMount_Horizontal, ~
+26,4,"L1, L2, L3, L4",68n,Device:L,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+27,4,"L5, L6, L7, L8",10n,Device:L,Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~
+28,1,Q1,Q_NMOS_GSD,Device:Q_NMOS_GSD,Package_TO_SOT_SMD:SOT-23,~
+29,1,R1,331,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+30,4,"R2, R3, R4, R5",4.7k,Device:R_Small,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+31,5,"R6, R7, R8, R16, R17",47,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+32,4,"R9, R10, R11, R12",60.4,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+33,1,R13,0,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+34,2,"R14, R15",90.9,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+35,1,R18,3.3k,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+36,1,R19,2.2k,Device:R_Small,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+37,1,R20,10k,Device:R_Small,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+38,1,R21,5.6k,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+39,1,R22,271,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+40,1,R23,50,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+41,3,"R24, R25, R26",33,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+42,4,"R27, R28, R29, R30",10k,Device:R,Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,~
+43,1,TP1,BBI-,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+44,1,TP2,BBI+,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+45,1,TP3,BBQ-,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+46,1,TP4,BBQ+,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+47,1,TP5,SPILE,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+48,1,TP6,SPICLK,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+49,1,TP7,SPIDATA,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+50,1,TP8,SPIRDBK,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+51,1,TP9,PLL_LD,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+52,1,TP10,GND,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.5mm,~
+53,1,TP11,/RST,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+54,1,TP12,SDIN,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+55,1,TP13,SCLK,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+56,1,TP14,LRCK,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+57,1,TP15,RMCK,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+58,1,TP16,B-,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+59,1,TP17,B+,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+60,1,TP18,A-,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+61,1,TP19,A+,Connector:TestPoint,TestPoint:TestPoint_Pad_D2.0mm,~
+62,1,U1,AZ1117-3.3,Regulator_Linear:AZ1117-3.3,Package_TO_SOT_SMD:SOT-223,https://www.diodes.com/assets/Datasheets/AZ1117.pdf
+63,1,U2,LT6604,My_Library2:LT6604,MyLibrary:LT6604IUFF-2.5-PBF,
+64,1,U3,TRF372017,My_Library2:TRF372017,Package_DFN_QFN:VQFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm_ThermalVias,
+65,1,U4,CS4350,My_Library2:CS4350,Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm,
+66,1,X1,ASV-20.0MHz,Oscillator:ASV-xxxMHz,Oscillator:Oscillator_SMD_Abracon_ASV-4Pin_7.0x5.1mm,http://www.abracon.com/Oscillators/ASV.pdf

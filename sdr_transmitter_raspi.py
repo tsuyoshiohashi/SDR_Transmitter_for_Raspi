@@ -3,19 +3,19 @@
 #
 # sdr_transmitter_raspi.py
 #
-# This program is for SDR_Transmit_Hat(My own work, See  ***)
+# This program is for SDR_Transmit_Hat(My own work, See  hat directory)
 # set registers in trf372017 to control VCO/PLL and generate/transmit PSK signal
 # 
 # I/Q signal is provided through i2s on raspi (Max 192k sample/sec)
-# SPI and I2C port in raspi board must be enabled. 
+# SPI and I2C port in raspi board must be enabled and set default sound device. 
 #
-# Required file: trf372017_raspy.py and psk_raspi.py in same directory
+# Required file: trf372017_raspy.py and psk_raspi.py in the same directory.
 # 
-# Terminate the RF output in the experiment.　;-)
+# 'pi4' is not raspberry pi4. It means 'π/4 shift' here.
 #
 # This implementation is for personal experiments.
 #
-# Copyright (c) 2022 Tsuyoshi Ohashi
+# Copyright (c) 2022-2023 Tsuyoshi Ohashi
 # Released under the MIT license
 # https://opensource.org/licenses/mit-license.php
 #
@@ -25,7 +25,7 @@ import os
 import numpy as np
 from time import sleep
 import trf372017_raspi as trf372017
-import psk_raspi as pskmod
+import psk_raspi as psk
 
 on = "on"
 off = "off"
@@ -37,7 +37,9 @@ def show_help(trf):
     print("+/-", "\t\t -> {:.0f}kHz up/down".format(trf.freq_step/1000))
     print("number   \t -> frequency(10kHz step)")
     print("tx modulator", "\t -> transmit data")
-    print("\t\t with modulator(bpsk16/bpsk32/bpsk48/bpsk64/qpsk32/qpsk64/qpsk96/qpsk128)")
+    print("\t\t with modulator(bpsk16/bpsk24/bpsk32/bpsk48/bpsk64/qpsk32/qpsk48/qpsk64/qpsk96/qpsk128)")
+    print("\t\t with modulator(pi2bpsk16/pi2bpsk24/pi2bpsk32/pi2bpsk48/pi2bpsk64/pi4qpsk32/pi4qpsk48/pi4qpsk64/pi4qpsk96/pi4qpsk128)")
+    print("\t\t with modulator(oqpsk16/oqpsk24/oqpsk32/oqpsk48/oqpsk64)")    
     print("data [f | m | r]", "\t -> data pattern, fixed/monotonic/random")
     print("len N", "\t\t -> data length N bits")
     print("disp L", "\t\t -> display IQ wave form during L symbols, 0 means no display")
@@ -68,8 +70,8 @@ def start_trf(trf,freq):
 ### 
 def main():
     
-    # 192 sampling version
-    print("SDR Transmitter for Raspi(trf372017) 192k Rev.j")
+    # 192kHz sampling frequency / bpsk, qpsk, pi/2bpsk, pi/4qpsk, oqpsk 
+    print("SDR Transmitter for Raspi(trf372017) 192k sampling, oqpsk Rev.m")
     
     # initialize/set default trf372017 registers 
     trf = trf372017.Trf372017(0,0)      # SPI bus=0,device=0
@@ -80,34 +82,76 @@ def main():
     
     # various psk modulators 
     # sps : sample per symbol
-    #       
-    ### QPSK ####          bps = fs/sps*log2(mod)
-    # 32kbps
-    qpsk32 = pskmod.PskMod(mod=4, fs=192000, sps=12) 
-    # 48kbps
-    qpsk48 = pskmod.PskMod(mod=4, fs=192000, sps=8)    
-    ## 64kbps
-    qpsk64 = pskmod.PskMod(mod=4, fs=192000, sps=6) 
-    ## 96kbps
-    qpsk96 = pskmod.PskMod(mod=4, fs=192000, sps=4) 
-    ## 128kbps
-    qpsk128 = pskmod.PskMod(mod=4, fs=192000, sps=3)  
-      
-    ### BPSK
-    # 16kbps
-    bpsk16 = pskmod.PskMod(mod=2, fs=192000, sps=12)
-    # 24kbps
-    bpsk24 = pskmod.PskMod(mod=2, fs=192000, sps=8)
-    # 32kbps
-    bpsk32 = pskmod.PskMod(mod=2, fs=192000, sps=6) 
-    # 48kbps
-    bpsk48 = pskmod.PskMod(mod=2, fs=192000, sps=4) 
-    # 64kbps
-    bpsk64 = pskmod.PskMod(mod=2, fs=192000, sps=3) 
+    #
+    ### BPSK ###
+    # 16kbps / 16ksps
+    bpsk16 = psk.PskMod(mod="bpsk", fs=192000, sps=12)
+    # 24kbps / 24ksps
+    bpsk24 = psk.PskMod(mod="bpsk", fs=192000, sps=8)
+    # 32kbps / 32ksps
+    bpsk32 = psk.PskMod(mod="bpsk", fs=192000, sps=6) 
+    # 48kbps / 48ksps
+    bpsk48 = psk.PskMod(mod="bpsk", fs=192000, sps=4) 
+    # 64kbps / 64ksps
+    bpsk64 = psk.PskMod(mod="bpsk", fs=192000, sps=3) 
+    ### QPSK ###         bps = fs/sps*log2(mod)
+    # 32kbps / 16ksps
+    qpsk32 = psk.PskMod(mod="qpsk", fs=192000, sps=12) 
+    # 48kbps / 24ksps
+    qpsk48 = psk.PskMod(mod="qpsk", fs=192000, sps=8)    
+    ## 64kbps / 32ksps
+    qpsk64 = psk.PskMod(mod="qpsk", fs=192000, sps=6) 
+    ## 96kbps /48ksps
+    qpsk96 = psk.PskMod(mod="qpsk", fs=192000, sps=4) 
+    ## 128kbps / 64ksps
+    qpsk128 = psk.PskMod(mod="qpsk", fs=192000, sps=3)  
     
+    ### pi/2 shift BPSK ###
+    # 16kbps / 16ksps
+    pi2bpsk16 = psk.PskMod(mod="pi2bpsk", fs=192000, sps=12)
+    # 24kbps / 24ksps
+    pi2bpsk24 = psk.PskMod(mod="pi2bpsk", fs=192000, sps=8)
+    # 32kbps / 32ksps
+    pi2bpsk32 = psk.PskMod(mod="pi2bpsk", fs=192000, sps=6) 
+    # 48kbps / 48ksps
+    pi2bpsk48 = psk.PskMod(mod="pi2bpsk", fs=192000, sps=4) 
+    # 64kbps / 64ksps
+    pi2bpsk64 = psk.PskMod(mod="pi2bpsk", fs=192000, sps=3) 
+    ### pi/4 shift QPSK ###          bps = fs/sps*log2(mod)
+    # 32kbps / 16ksps
+    pi4qpsk32 = psk.PskMod(mod="pi4qpsk", fs=192000, sps=12) 
+    # 48kbps / 24ksps
+    pi4qpsk48 = psk.PskMod(mod="pi4qpsk", fs=192000, sps=8)    
+    ## 64kbps / 32ksps
+    pi4qpsk64 = psk.PskMod(mod="pi4qpsk", fs=192000, sps=6) 
+    ## 96kbps / 48ksps
+    pi4qpsk96 = psk.PskMod(mod="pi4qpsk", fs=192000, sps=4) 
+    ## 128kbps / 64ksps
+    pi4qpsk128 = psk.PskMod(mod="pi4qpsk", fs=192000, sps=3)  
+    
+    ### OQPSK : offset qpsk ###
+    # 16kbps / 16ksps
+    oqpsk16 = psk.PskMod(mod="oqpsk", fs=192000, sps=12)
+    # 24kbps / 24ksps
+    oqpsk24 = psk.PskMod(mod="oqpsk", fs=192000, sps=8) 
+    # 32kbps / 32ksps
+    oqpsk32 = psk.PskMod(mod="oqpsk", fs=192000, sps=6) 
+    # 48kbps / 48ksps
+    oqpsk48 = psk.PskMod(mod="oqpsk", fs=192000, sps=4)    
+    # 64kbps / 64ksps 
+    oqpsk64 = psk.PskMod(mod="oqpsk", fs=192000, sps=3) 
+   
     # modulators
-    modulators = [bpsk16,bpsk24,bpsk32,bpsk48,bpsk64,qpsk32,qpsk48,qpsk64,qpsk96,qpsk128] 
-    modulator_list = ["bpsk16","bpsk24","bpsk32","bpsk48","bpsk64","qpsk32","qpsk48","qpsk64","qpsk96","qpsk128"]  
+    modulators = [bpsk16, bpsk24, bpsk32, bpsk48, bpsk64,\
+                qpsk32, qpsk48, qpsk64, qpsk96, qpsk128,\
+                pi2bpsk16, pi2bpsk24, pi2bpsk32, pi2bpsk48, pi2bpsk64,\
+                pi4qpsk32, pi4qpsk48, pi4qpsk64, pi4qpsk96, pi4qpsk128,\
+                oqpsk16, oqpsk24, oqpsk32, oqpsk48, oqpsk64] 
+    modulator_list = ["bpsk16", "bpsk24", "bpsk32", "bpsk48", "bpsk64",\
+                "qpsk32", "qpsk48", "qpsk64", "qpsk96", "qpsk128",\
+                "pi2bpsk16", "pi2bpsk24", "pi2bpsk32", "pi2bpsk48", "pi2bpsk64",\
+                "pi4qpsk32", "pi4qpsk48", "pi4qpsk64", "pi4qpsk96", "pi4qpsk128",\
+                "oqpsk16", "oqpsk24", "oqpsk32", "oqpsk48", "oqpsk64"]  
 
     gain = modulators[0].gain_default
     #print("gain=", gain)
@@ -130,72 +174,77 @@ def main():
     # Lets' go!
     while(1):
         # PLL lock detect
-        ld = trf.get_ld()
+        #ld = trf.get_ld()
         #print("LD:",ld)
         p_start = "\033[32m" if (trf.get_ld()) else "\033[31m"   # Lock:Green/ Unlock:Red 
         p_end = "\033[0m"
-        p1 = trf.nint   # 10kHz frequency
-        p2 = ">"
+        p1 = trf.nint   # 10kHz unit frequency
+        p2 = ">"        # prompt
         
         cmd_line = input( p_start + str(p1) + p2 + p_end)
         readline.write_history_file(HISTORY_FILE)
         cmd = cmd_line.split()
         if( len(cmd)==0):
             pass
-        # frequency
+        # set frequency
         elif(cmd[0] == "freq" or cmd[0]=="f"):
             try:
                 freq = int(cmd[1])
                 trf.set_frequency(freq)
             except:
-                print("Usage: >freq frequency(10kHzstep)")            
-        elif(cmd[0] == "+"):
+                print("Usage: >freq frequency(10kHz step)")
+        elif(cmd[0] == "+"):    # up
             freq += 1
             trf.set_frequency(freq)
-        elif(cmd[0] == "-"):
+        elif(cmd[0] == "-"):    # down
             freq -= 1
             trf.set_frequency(freq)
-        elif(cmd[0].isdecimal()):
+        elif(cmd[0].isdecimal()):   # direct 
             freq = int(cmd[0])
             trf.set_frequency(freq)
-        # PLL
+        # PLL setting
         elif(cmd[0] == "icp"): # 0=1.94mA, 31=0.47mA, 10=0.97mA
             try:
                 trf.set_icp( int(cmd[1]))
             except:
                 print("icp: ", trf.icp)
+        # auto-calibration
         elif(cmd[0]=="encal"):
             trf.set_encal()
+        # lock-detector
         elif(cmd[0]=="ldana"):
             try:
                 trf.set_ld_ana_prec( int(cmd[1]))
             except:
                 print("ldana: ", trf.ld_ana_prec)
+        # Lock detector precision
         elif(cmd[0]=="lddig"):
             try:
                 trf.set_ld_dig_prec( int(cmd[1]))
             except:
                 print("lddig: ", trf.ld_dig_prec)
-        # power down
+        # power down pll block
         elif(cmd[0]=="pwdpll"):
             try:
                 trf.set_pwr_pll(on if(cmd[1]=="on") else off)
                 #print("pwd_pll=", cmd[1])
             except:
                 print("pwd_pll: ", trf.pwd_pll)
-        # power down
+        # power down charge pump
         elif(cmd[0]=="pwdcp"):
             try:
                 trf.set_pwr_cp(on if(cmd[1]=="on") else off)
                 #print("pwd_cp=", cmd[1])
             except:
                 print("pwd_cp: ", trf.pwd_cp)
+        # power down vco
         elif(cmd[0]=="pwdvco"):
             try:
                 trf.set_pwr_vco(on if(cmd[1]=="on") else off)
                 #print("pwd_vco=", cmd[1])
             except:
                 print("pwd_vco: ", trf.pwd_vco)
+        # power down frequency divider
         elif(cmd[0]=="pwdtx"):
             try:
                 trf.set_pwr_txdiv(on if(cmd[1]=="on") else off)
@@ -223,7 +272,6 @@ def main():
                 mod_type = cmd[1]
                 if(mod_type not in modulator_list):
                     mod_type = modulator_list[0]    # default    
-                
             except:
                 mod_type = modulator_list[0]
             # 
@@ -244,16 +292,16 @@ def main():
                 
             elif(data_type=="fixed"):
                 ### Can't send pure DC ### 
-                bits = np.tile([0,1,0,1,0,0,1,1], len_bits//8)
+                bits = np.tile([0,1,0,1,0,0,1,1], len_bits//8)  # exsample
             else:
                 bits = np.random.randint(0, 2, len_bits)  
             #print("bits:", bits)
             
-            # Now start transmit
+            # Now start transmit!
             trf.set_pwr_txdiv(on, detail)    
             counter = repeat
             for i, mod_can in enumerate(modulator_list):
-                if(mod_type == mod_can):  # found modulator type
+                if(mod_type == mod_can):  # modulator type found
                     print("Tranmit w/", mod_type, len_bits, "bits", repeat, "times")
                     modulators[i].set_gain(gain)
                     counter = repeat
@@ -281,7 +329,6 @@ def main():
                     len_bits = 8
             except:
                 len_bits = len_bits_default
-                
             print("bit length=",len_bits)      
                 
         # display IQ wave disp_l samples
@@ -338,3 +385,5 @@ def main():
 if __name__ == '__main__':
     
     main()
+    
+# end of sdr_transmitter_raspi.py
